@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 80%; 
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.name-box {
+    width: 500px;
+    height: 30px;
+    background-color: #000000;
+}
+
+canvas{
+    border: 5px solid #fff;
+}
+  
+.name-box p {
+    margin: 0;
+    font-size: 20px; 
+}
+
+/* Responsive adjustments using media queries */
+@media only screen and (max-width: 400px) {
+    .name-box {
+        width: 100%;
+    }
+
+    canvas {
+        width: 90%;
+        height: 90vh; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .name-box {
+        width: 100%;
+    }
+
+    canvas {
+        width: 90%;
+        height: 80vh; 
+    }
+}

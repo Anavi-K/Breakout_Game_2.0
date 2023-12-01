@@ -1,0 +1,148 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&display=swap');
+
+/* Body styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+/* H1 styles */
+h1 {
+    color: white;
+    font-family: "Black Ops One";
+    font-size: 90px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+    animation: expand-retract 2s infinite;
+}
+
+/* Keyframes for animation */
+@keyframes expand-retract {
+    0%, 100% { font-size: 6em; }
+    50% { font-size: 7em; }
+}
+
+/* Name display styles */
+.name-display {
+    display: flex;
+    justify-content: center;
+    width: 80%; /* Adjusted width for better responsiveness */
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+}
+
+/* Score styles */
+.score {
+    display: flex;
+    justify-content: center;
+    width: 80%; /* Adjusted width for better responsiveness */
+    padding-bottom: 15px;
+}
+
+/* Button container styles */
+.button-container {
+    text-align: center;
+    margin-top: 30px; /* Adjusted margin for better spacing */
+}
+
+/* Play again and exit button styles */
+.play-again, .exit {
+    background-color: #D9D9D9;
+    font-size: 18px; /* Decreased font size for mobile */
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin-right: 15px; /* Increased margin between buttons for mobile */
+    width: 190px; /* Slightly decreased width for mobile */
+    padding: 12px 18px; /* Adjusted padding for better visibility in mobile */
+
+    /* Additional styles for mobile */
+    @media only screen and (max-width: 600px) {
+        width: 210px; /* Original width for mobile */
+        padding: 15px 20px; /* Original padding for mobile */
+        font-size: 20px; /* Original font size for mobile */
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 160px; /* Further decreased width for smaller screens */
+        height: 45px; /* Increased height for smaller screens */
+        margin-right: 20px; /* Increased margin between buttons for smaller screens */
+        font-size: 16px; /* Further decreased font size for smaller screens */
+    }
+
+    @media only screen and (max-width: 200px) {
+        width: 120px; /* Further decreased width for very small screens */
+        padding: 10px 15px; /* Further adjusted padding for very small screens */
+        margin-right: 15px; /* Increased margin between buttons for very small screens */
+        font-size: 14px; /* Further decreased font size for very small screens */
+    }
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for screens up to 600px width */
+    h1 {
+        font-size: 60px;
+        animation: none; /* Disable animation for mobile */
+    }
+
+    .name-display, .score {
+        width: 90%;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+    .play-again{
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* Adjust styles for screens up to 400px width */
+    h1 {
+        font-size: 45px;
+        animation: none; /* Disable animation for mobile */
+    }
+
+    .name-display, .score {
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 15px; /* Adjusted margin for better spacing */
+    }
+    .play-again{
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    /* Adjust styles for screens up to 200px width */
+    h1 {
+        font-size: 40px;
+        padding-bottom: 0;
+        animation: none; /* Disable animation for mobile */
+    }
+
+    .name-display, .score {
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 10px; /* Adjusted margin for better spacing */
+    }
+    .play-again{
+        margin-bottom: 5px;
+    }
+}
